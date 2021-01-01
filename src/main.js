@@ -4,8 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import fastClick from 'fastclick'
-import './assets/styles/reset.css'
-import './assets/styles/border.css'
+import 'styles/reset.css'
+import 'styles/border.css'
+import 'styles/iconfont.css'
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)
@@ -18,4 +19,4 @@ new Vue({
   template: '<App/>'
 })
 
-//路由就是根据网址的不同，返回不同的内容给用户
+// 路由就是根据网址的不同，返回不同的内容给用户
