@@ -3,17 +3,26 @@
   <div>
     <home-header></home-header>
     <home-swiper></home-swiper>
+    <home-one-icons></home-one-icons>
+    <home-two-icons></home-two-icons>
+    <home-icons></home-icons>
   </div>
 </template>
 
 <script>
-import HomeHeader from './components/Header'
-import HomeSwiper from './components/Swiper'
+import HomeHeader from './components/Header.vue'
+import HomeSwiper from './components/Swiper.vue'
+import HomeOneIcons from './components/OneIcons.vue'
+import HomeTwoIcons from './components/TwoIcons.vue'
+import HomeIcons from './components/Icons.vue'
 export default {
   name: 'Home',
   components: {
     HomeHeader,
-    HomeSwiper
+    HomeSwiper,
+    HomeOneIcons,
+    HomeTwoIcons,
+    HomeIcons
   }
 }
 </script>

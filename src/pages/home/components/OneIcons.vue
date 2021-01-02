@@ -1,0 +1,80 @@
+<template>
+  <div class="oneIcons">
+    <div class="oneIcon" v-for="item of oneIconList" :key="item.id">
+      <div class="oneIcon-img">
+        <img class="oneIcon-img-content" :src="item.imgUrl"/>
+        <p class="oneIcon-desc">{{item.desc}}</p>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'HomeOneIcons',
+  data () {
+    return {
+      oneIconList: [{
+        id: '0001',
+        imgUrl: '//s.qunarzz.com/homenode/images/touchheader/hotel.png',
+        desc: '酒店'
+      }, {
+        id: '0002',
+        imgUrl: '//s.qunarzz.com/homenode/images/touchheader/flight.png',
+        desc: '机票'
+      }, {
+        id: '0003',
+        imgUrl: '//s.qunarzz.com/homenode/images/touchheader/train.png',
+        desc: '火车票'
+      }, {
+        id: '0004',
+        imgUrl: '//s.qunarzz.com/homenode/images/touchheader/package.png',
+        desc: '度假'
+      }, {
+        id: '0005',
+        imgUrl: '//s.qunarzz.com/homenode/images/touchheader/piao.png',
+        desc: '景点门票'
+      }]
+    }
+  }
+}
+</script>
+
+<style lang="stylus" scoped>
+  @import '~styles/mixins.styl'
+  .oneIcons
+    overflow: hidden
+    height: 0
+    padding-bottom: 25%
+    .oneIcon
+      position: relative
+      overflow: hidden
+      float: left
+      width: 20%
+      height: 0
+      // 相对于icons的width: 100%
+      padding-bottom: 25%
+      .oneIcon-img
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: .44rem
+        box-sizing: border-box
+        padding: .2rem
+        .oneIcon-img-content
+          display: block
+          margin: 0 auto
+          height: 100%
+      .oneIcon-desc
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        height: .10rem
+        line-height: .55rem
+        text-align: center
+        font-size: .3rem
+        color: $darkTextColor
+        ellipsis ()
+</style>
