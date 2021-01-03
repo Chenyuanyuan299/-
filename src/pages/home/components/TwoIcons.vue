@@ -45,7 +45,7 @@ export default {
   .twoIcons
     overflow: hidden
     height: 0
-    padding-bottom: 25%
+    padding-bottom: 20%
     .tweIcon
       position: relative
       overflow: hidden
