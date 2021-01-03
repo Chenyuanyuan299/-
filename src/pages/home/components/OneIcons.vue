@@ -1,6 +1,6 @@
 <template>
   <div class="oneIcons">
-    <div class="oneIcon" v-for="item of oneIconList" :key="item.id">
+    <div class="oneIcon" v-for="item of list" :key="item.id">
       <div class="oneIcon-img">
         <img class="oneIcon-img-content" :src="item.imgUrl"/>
         <p class="oneIcon-desc">{{item.desc}}</p>
@@ -12,36 +12,13 @@
 <script>
 export default {
   name: 'HomeOneIcons',
-  data () {
-    return {
-      oneIconList: [{
-        id: '0001',
-        imgUrl: '//s.qunarzz.com/homenode/images/touchheader/hotel.png',
-        desc: '酒店'
-      }, {
-        id: '0002',
-        imgUrl: '//s.qunarzz.com/homenode/images/touchheader/flight.png',
-        desc: '机票'
-      }, {
-        id: '0003',
-        imgUrl: '//s.qunarzz.com/homenode/images/touchheader/train.png',
-        desc: '火车票'
-      }, {
-        id: '0004',
-        imgUrl: '//s.qunarzz.com/homenode/images/touchheader/package.png',
-        desc: '度假'
-      }, {
-        id: '0005',
-        imgUrl: '//s.qunarzz.com/homenode/images/touchheader/piao.png',
-        desc: '景点门票'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
 
 <style lang="stylus" scoped>
-  @import '~styles/mixins.styl'
   .oneIcons
     overflow: hidden
     height: 0
@@ -76,5 +53,4 @@ export default {
         text-align: center
         font-size: .3rem
         color: $darkTextColor
-        ellipsis ()
 </style>
