@@ -1,7 +1,7 @@
 <!--template根下只能有一个标签，所以外层用div进行包裹-->
 <template>
   <div>
-    <home-header :city="city"></home-header>
+    <home-header></home-header>
     <home-swiper :list="swiperList"></home-swiper>
     <home-one-icons :list="oneIconList"></home-one-icons>
     <home-two-icons :list="twoIconList"></home-two-icons>
@@ -24,7 +24,6 @@ export default {
   name: 'Home',
   data () {
     return {
-      city: '',
       swiperList: [],
       oneIconList: [],
       twoIconList: [],
@@ -51,7 +50,6 @@ export default {
       res = res.data
       if (res.ret && res.data) {
         const data = res.data
-        this.city = data.city
         this.swiperList = data.swiperList
         this.oneIconList = data.oneIconList
         this.twoIconList = data.twoIconList
