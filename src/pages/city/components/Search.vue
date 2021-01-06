@@ -104,9 +104,10 @@ export default {
       color: #666
     .place
       position: absolute
-      top: .2rem
+      top: .15rem
       left: .2rem
       color: #666
+      font-size: .4rem
   .search-content
     z-index: 1
     position: absolute
